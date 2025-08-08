@@ -29,7 +29,4 @@ Note-Zap lets you create, view, edit, and delete notes with a clean and modern i
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 
----
-
-## 📂 Project Structure
 
