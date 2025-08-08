@@ -47,23 +47,23 @@ export default function Create (){
 // }
  
   return (
-    <div className='bg-base-200 min-h-screen flex justify-center items-center h-screen'>
+    <div className='bg-base-200 min-h-screen flex justify-center items-center h-screen p-4 sm:p-6 md:p-10'>
     
-    <form onSubmit={handleSubmit}  className='mt-10 bg-base-content/10 w-100 p-4 rounded-xl shadow-lg'>
+    <form onSubmit={handleSubmit}  className='mt-10 bg-base-content/10 w-100 p-4 max-w-lg sm:p-6 md:p-8 rounded-xl shadow-lg'>
        <div className=''><Link to="/" className="btn btn-ghost"><ArrowLeftIcon className='size-5'/><p>Back to notes</p></Link> </div>
        <div className="card-body ">
        <h2 className='card-title text-2xl font-bold text-center'>Create New Note</h2>
-       <fieldset className='fieldset'>
-         <legend className='fieldset-legend text-[18px]'>Title</legend>
-         <input value={title} onChange={(e)=> setTitle(e.target.value)} type='text' placeholder='Title' className='input input-ghost w-full'></input>
+       <fieldset className='fieldset space-y-4'>
+         <legend className='fieldset-legend text-lg sm:text-xl'>Title</legend>
+         <input value={title} onChange={(e)=> setTitle(e.target.value)} type='text' placeholder='Title' className='input input-ghost w-full text-base sm:text-lg'></input>
        
-        <legend className="fieldset-legend text-[18px]">Content</legend>
-        <textarea value={content} onChange={(e)=> setContent(e.target.value)} className="textarea textarea-ghost h-40 w-full" placeholder='Write your content here'></textarea>
+        <legend className="fieldset-legend text-lg sm:text-xl sm:mt-4">Content</legend>
+        <textarea value={content} onChange={(e)=> setContent(e.target.value)} className="sm:text-lg text-base textarea textarea-ghost h-40 w-full resize-none" placeholder='Write your content here'></textarea>
         
        </fieldset>
 
        <div className="actions text-center mt-2">
-        <button className="btn btn-primary" type="submit" disabled={loading}>
+        <button className="btn btn-primary text-base sm:text-lg" type="submit" disabled={loading}>
           {loading ? "Creating... " : "Create Note"}
           </button>
        </div>

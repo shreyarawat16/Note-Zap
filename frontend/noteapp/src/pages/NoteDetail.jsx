@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, Loader2Icon, LoaderIcon, Trash2 } from 'lucide-react'
+import { ArrowLeftIcon, Loader2, Loader2Icon, LoaderIcon, Trash2 } from 'lucide-react'
 import React, { useState , useEffect} from 'react'
 import {Link, useNavigate, useParams} from "react-router-dom"
 import api from "../lib/axios"
@@ -81,40 +81,42 @@ export default function NoteDetail() {
   }
   if(loading){
     return(
-      <div className='min-h-screen bg-base-200 flex justify-center items-center'>
+      <div className='min-h-screen bg-base-200 max-w-[1180px] sm:p-6 md:p-10 p-4 flex justify-center items-center'>
         <LoaderIcon className='size-10 animate-spin'/>
       </div>
     )
   }
   return (
     
-    <section className='min-h-screen bg-base-200 max-w-[1180px] mx-auto flex justify-between items-center'>
+    <section className='min-h-screen bg-base-200 max-w-[1180px] sm:p-6 md:p-10 p-4'>
    <div className='max-w-2xl mx-auto container'>
 
     {/* Upper section */}
      <div className='max-w-2xl flex justify-between items-center mx-auto'>
         <Link to="/" className='btn btn-ghost'><ArrowLeftIcon className='size-5'/> <p>Back to Notes</p></Link>
-        <div onClick={handleDelete} className='btn btn-outline btn-error py-4' type="submit"><Trash2 className='size-5'/> Delete button</div>
+        <button onClick={handleDelete} className='btn btn-outline btn-error py-3 flex items-center gap-2' type="submit"><Trash2 className='size-5'/><p>Delete Note</p></button>
     </div>
 
     {/* Form section */}
     
-    <div className='bg-base-content/10 form-controls w-2xl card-body mx-auto mt-5'>
+    <div className='w-full max-w-sm bg-base-content/10  md:max-w-lg xl:max-w-xl mx-auto mt-5 rounded-lg p-4'>
       
-      <fieldset className='fieldset'>
+      <fieldset className='fieldset space-y-4'>
         <legend className="fieldset-legend text-xl font-bold text-center">
           Note details
         </legend>
         <label className='label size-5'>Title</label>
-        <input type="text" value={note.title} onChange={(e)=> setNote({...note, title: e.target.value})} className='input w-full' ></input>
+        <input type="text" value={note.title} onChange={(e)=> setNote({...note, title: e.target.value})} className='input w-full text-base sm:text-lg' ></input>
        
         <label className='label'>Content</label>
-        <textarea type="text" value={note.content} onChange={(e)=> setNote({...note, content: e.target.value})} className='textarea w-full h-40' > </textarea>
+        <textarea type="text" value={note.content} onChange={(e)=> setNote({...note, content: e.target.value})} className='textarea w-full h-40 text-base sm:text-lg resize-none' > </textarea>
       </fieldset>
 
       <div className="card-actions flex justify-end">
         <button className='btn btn-primary' onClick={handleSave} type="submit" disabled={saving}>
-          {saving? "Saving" : "Save Changes"}
+          {saving? <>
+          <Loader2 className='animate-spin w-5 h-5'/> "Saving"
+          </> : "Save Changes"}
         </button>
       </div>
     </div>
