@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    // install dependencies for frontend and backend because in github, we dont have node_modules so render cannot see those dependencies. After
-    // installing dependencies, we build the frontend so you can get the optimized version of react app and start the backend
     "build": "npm install --prefix backend && npm install --prefix frontend/noteapp && npm run build --prefix frontend/noteapp",
     "start": "npm run start --prefix backend"
   },
