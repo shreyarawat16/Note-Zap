@@ -102,18 +102,18 @@ export default function NoteDetail() {
     <div className='w-full max-w-sm bg-base-content/10  md:max-w-lg xl:max-w-xl mx-auto mt-5 rounded-lg p-4'>
       
       <fieldset className='fieldset space-y-4'>
-        <legend className="fieldset-legend text-lg md:text-xl font-bold text-center">
+        <legend className="fieldset-legend md:text-xl sm:text-sm font-bold text-center">
           Note details
         </legend>
         <label className='label size-5'>Title</label>
-        <input type="text" value={note.title} onChange={(e)=> setNote({...note, title: e.target.value})} className='input w-full text-base sm:text-md' ></input>
+        <input type="text" value={note.title} onChange={(e)=> setNote({...note, title: e.target.value})} className='input w-full text-base sm:text-sm' ></input>
        
         <label className='label'>Content</label>
-        <textarea type="text" value={note.content} onChange={(e)=> setNote({...note, content: e.target.value})} className='textarea w-full h-40 text-base sm:text-md resize-none' > </textarea>
+        <textarea type="text" value={note.content} onChange={(e)=> setNote({...note, content: e.target.value})} className='textarea w-full h-40 text-base sm:text-sm resize-none' > </textarea>
       </fieldset>
 
       <div className="card-actions flex justify-end">
-        <button className='btn btn-primary' onClick={handleSave} type="submit" disabled={saving}>
+        <button className='btn btn-primary mt-2 sm:mx-auto' onClick={handleSave} type="submit" disabled={saving}>
           {saving? <>
           <Loader2 className='animate-spin w-5 h-5'/> "Saving"
           </> : "Save Changes"}
