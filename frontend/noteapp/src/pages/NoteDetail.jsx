@@ -94,7 +94,7 @@ export default function NoteDetail() {
     {/* Upper section */}
      <div className='max-w-2xl flex justify-between items-center mx-auto'>
         <Link to="/" className='btn btn-ghost'><ArrowLeftIcon className='size-5'/> <p>Back to Notes</p></Link>
-        <button onClick={handleDelete} className='btn btn-outline btn-error sm:py-1 md:py-3 flex items-center gap-2' type="submit"><Trash2 className='size-5'/><p className='text-sm md:text-md'>Delete Note</p></button>
+        <button onClick={handleDelete} className='btn btn-outline btn-error sm:size-sm sm:py-1 md:py-3 flex items-center gap-2' type="submit"><Trash2 className='size-5'/><p className='text-sm md:text-md'>Delete Note</p></button>
     </div>
 
     {/* Form section */}
@@ -102,7 +102,7 @@ export default function NoteDetail() {
     <div className='w-full max-w-sm bg-base-content/10  md:max-w-lg xl:max-w-xl mx-auto mt-5 rounded-lg p-4'>
       
       <fieldset className='fieldset space-y-4'>
-        <legend className="fieldset-legend md:text-xl text-md font-bold text-center">
+        <legend className="fieldset-legend md:text-xl sm:text-lg font-bold text-center">
           Note details
         </legend>
         <label className='label size-5'>Title</label>
