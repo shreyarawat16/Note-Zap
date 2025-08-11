@@ -3,7 +3,7 @@ import React from 'react'
 
 const RateLimit = () => {
   return (
-    <div className="bg-primary/10 border-b-primary/30 w-full max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto mt-2 rounded-lg shadow-md flex justify-between items-center gap-2 py-8 px-6">
+    <div className="bg-primary/10 border-b-primary/30 w-full max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl mx-auto mt-2 rounded-lg shadow-md flex justify-center items-center gap-4 py-8 px-6">
       <div className="bg-primary/20 rounded-full p-4 flex-shrink-0 mb-2 sm:mb-0">
         <ZapIcon className="size-10 text-primary md:size-8 sm:size-5 "/>
       </div>
