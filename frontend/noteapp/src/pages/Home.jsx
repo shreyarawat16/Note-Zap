@@ -41,13 +41,13 @@ export default function Home () {
     <div className="min-h-screen">
       <Navbar/>
       {isRateLimited && <RateLimit/>}
-      <section className="mx-auto max-w-[1180px] sm:min-w-[640px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px] p-4 sm:p-6 md:p-10">
+      <section className="mx-auto max-w-[1180px] sm:min-w-[500px] md:min-w-[768px] lg:min-w-[1024px] xl:min-w-[1280px]">
         {loading && 
           <div className="text-primary text-center py-10"> loading notes..</div>
         }
         {notes.length==0 && !isRateLimited && <NotesNotFound/>}
         {notes.length >0 && !isRateLimited &&
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 sm:text-center">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 sm:flex flex-col justify-center">
                   {notes.map(note=>{
                     return(
                      <NoteCard note={note} key={note._id} setNotes={setNotes}/>
