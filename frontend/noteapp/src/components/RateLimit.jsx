@@ -8,9 +8,9 @@ const RateLimit = () => {
         <ZapIcon className="size-10 text-primary md:size-8 sm:size-5 "/>
       </div>
       <div className='text-center sm:text-left'>
-        <h3 className="text-xl text-center font-bold mb-2 sm:text-md md:text-lg">Rate Limit Reached</h3>
-        <p className="text-base-content mb-1 sm:text-sm md:text-md">You've made too many requests in a short period. Please wait a second.</p>
-        <p className="text-sm text-base-content md:text-md">Try again in a few seconds for the best experience.</p>
+        <h3 className="text-xl text-center font-bold mb-2 sm:text-md md:text-xl">Rate Limit Reached</h3>
+        <p className="text-base-content mb-1 md:text-lg">You've made too many requests in a short period. Please wait a second.</p>
+        <p className="text-sm text-base-content md:text-lg">Try again in a few seconds for the best experience.</p>
       </div>
     </div>
   )
