@@ -4,7 +4,7 @@ import {PlusIcon} from 'lucide-react'
 
 const Navbar = () => {
   return(
-    <header className="min-w-[450px] navbar bg-base-300 shadow-sm border-base-content w-full max-w-[1180px] mx-auto" >
+    <header className="min-w-[450px] navbar bg-base-300 shadow-sm border-base-content w-[1180px] mx-auto" >
         <div className="flex justify-between items-center w-11/12 mx-auto">
             {/* LEFT PART */}
              
