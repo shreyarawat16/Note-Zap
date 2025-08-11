@@ -30,7 +30,7 @@ export default function NoteCard({note, setNotes}) {
         <div className="card-actions flex justify-between items-center">
            <span className='text-base-content/60'>{note.createdAt.slice(0,10)} </span> 
            <div className="flex items-center gap-1">
-            <PenSquareIcon className='size-5 sm:size-3'/> 
+            <PenSquareIcon className='md:size-5 size-4'/> 
             <button className='btn btn-ghost btn-xs sm:btn-[12px] text-error' onClick={(e)=> handleDelete(e,note._id)}><Trash2Icon className='size-5'/> </button>
           </div>
         </div>

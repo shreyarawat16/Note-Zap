@@ -94,7 +94,7 @@ export default function NoteDetail() {
     {/* Upper section */}
      <div className='max-w-2xl flex justify-between items-center mx-auto'>
         <Link to="/" className='btn btn-ghost'><ArrowLeftIcon className='size-5'/> <p>Back to Notes</p></Link>
-        <button onClick={handleDelete} className='btn btn-outline btn-error sm:size-sm sm:py-1 md:py-3 flex items-center gap-2' type="submit"><Trash2 className='size-5'/><p className='text-sm md:text-md'>Delete Note</p></button>
+        <button onClick={handleDelete} className='btn btn-outline btn-error sm:size-sm sm:py-1 md:py-3 flex items-center gap-2' type="submit"><Trash2 className='md:size-5 sm:size-4'/><p className='text-sm md:text-md'>Delete Note</p></button>
     </div>
 
     {/* Form section */}
