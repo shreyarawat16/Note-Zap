@@ -23,12 +23,12 @@ export default function NoteCard({note, setNotes}) {
   }
   return (
     <>
-    <Link to={`/note/${note._id}`} className="p-4 md:p-6 card bg-base-100 border-t-4 h-60 w-90 hover:shadow-xl transition-all duration-200 border-solid border-[#00FF9D]" >
+    <Link to={`/note/${note._id}`} className=" p-4 md:p-6 card bg-base-100 border-t-4 sm:h-40 sm:w-70 md:h-60 md:w-90 hover:shadow-xl transition-all duration-200 border-solid border-[#00FF9D]" >
       <div className="card-body bg-base-500 shadow-2xl w-90">
         <h2 className="card-title text-md font-bold ">{note.title} </h2>
-        <p className='text-base-content/80 text-[12px] md:text-[15px] flex-start'>{note.content} </p>
+        <p className='text-base-content/80 text-[15px] md:text-[16px] flex-start'>{note.content} </p>
         <div className="card-actions flex justify-between items-center">
-           <span className='text-base-content/60'>{note.createdAt.slice(0,10)} </span> 
+           <span className='md:text-base-content/60 sm:text-sm/60'>{note.createdAt.slice(0,10)} </span> 
            <div className="flex items-center gap-1">
             <PenSquareIcon className='md:size-5 size-4'/> 
             <button className='btn btn-ghost btn-xs sm:btn-[12px] text-error' onClick={(e)=> handleDelete(e,note._id)}><Trash2Icon className='size-5'/> </button>
