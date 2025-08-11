@@ -52,13 +52,13 @@ export default function Create (){
     <form onSubmit={handleSubmit}  className='mt-10 bg-base-content/10 w-100 p-4 max-w-lg sm:p-6 md:p-8 rounded-xl shadow-lg'>
        <div className=''><Link to="/" className="btn btn-ghost"><ArrowLeftIcon className='size-5'/><p>Back to notes</p></Link> </div>
        <div className="card-body ">
-       <h2 className='card-title text-sm font-bold text-center sm:text-lg md:text-xl lg:text-2xl'>Create New Note</h2>
+       <h2 className='card-title font-bold text-center text-lg md:text-xl lg:text-2xl'>Create New Note</h2>
        <fieldset className='fieldset space-y-4'>
-         <legend className='fieldset-legend text-lg sm:text-md'>Title</legend>
-         <input value={title} onChange={(e)=> setTitle(e.target.value)} type='text' placeholder='Title' className='input input-ghost w-full text-base sm:text-md'></input>
+         <legend className='fieldset-legend text-lg sm:text-sm'>Title</legend>
+         <input value={title} onChange={(e)=> setTitle(e.target.value)} type='text' placeholder='Title' className='input input-ghost w-full text-sm md:text-md'></input>
        
-        <legend className="fieldset-legend text-lg sm:text-xl sm:mt-4">Content</legend>
-        <textarea value={content} onChange={(e)=> setContent(e.target.value)} className="sm:text-md text-base textarea textarea-ghost h-40 w-full resize-none" placeholder='Write your content here'></textarea>
+        <legend className="fieldset-legend text-lg sm:text-sm sm:mt-4">Content</legend>
+        <textarea value={content} onChange={(e)=> setContent(e.target.value)} className="text-sm md:text-md textarea textarea-ghost h-40 w-full resize-none" placeholder='Write your content here'></textarea>
         
        </fieldset>
 

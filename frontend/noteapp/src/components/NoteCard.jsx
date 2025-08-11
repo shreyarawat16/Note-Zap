@@ -25,8 +25,8 @@ export default function NoteCard({note, setNotes}) {
     <>
     <Link to={`/note/${note._id}`} className="p-4 sm:p-5 md:p-6 card bg-base-100 border-t-4 h-60 w-90 hover:shadow-xl transition-all duration-200 border-solid border-[#00FF9D]" >
       <div className="card-body bg-base-500 shadow-2xl w-90">
-        <h2 className="card-title text-xl font-bold sm:text-md md:text-lg">{note.title} </h2>
-        <p className='text-base-content/80 text-sm sm:text-base md:text-lg'>{note.content} </p>
+        <h2 className="card-title text-md font-bold md:text-lg">{note.title} </h2>
+        <p className='text-base-content/80 text-md md:text-lg'>{note.content} </p>
         <div className="card-actions flex justify-between items-center">
            <span className='text-base-content/60'>{note.createdAt.slice(0,10)} </span> 
            <div className="flex items-center gap-1">
