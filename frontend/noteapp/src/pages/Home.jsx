@@ -41,7 +41,7 @@ export default function Home () {
     <div className="min-h-screen">
       <Navbar/>
       {isRateLimited && <RateLimit/>}
-      <section className="mx-auto max-w-[1180px] min-w-[640px]">
+      <section className="mx-auto max-w-[1180px] min-w-[450px]">
         {loading && 
           <div className="text-primary text-center py-10"> loading notes..</div>
         }
