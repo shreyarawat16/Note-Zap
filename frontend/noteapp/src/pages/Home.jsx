@@ -47,7 +47,7 @@ export default function Home () {
         }
         {notes.length==0 && !isRateLimited && <NotesNotFound/>}
         {notes.length >0 && !isRateLimited &&
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 sm:text-center">
                   {notes.map(note=>{
                     return(
                      <NoteCard note={note} key={note._id} setNotes={setNotes}/>
